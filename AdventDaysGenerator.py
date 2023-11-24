@@ -41,15 +41,6 @@ def main():
         file_name = folder_name + "/Day" + day + "/Day" + day + ".ipynb"
         input_name = folder_name + "/Day" + day + "/input.txt"
         f = open(file_name, "w")
-        f.write("# Path: " + file_name + "\n")
-        f.write("# O que a preguiça não faz...\n\n")
-        f.write("def main():\n")
-        f.write("\twith open(\"" + input_name + "\", \"r\") as f:\n")
-        f.write("\t\tlines = f.readlines()\n\n")
-        f.write("\tprint(\"Part 1: \")\n")
-        f.write("\tprint(\"Part 2: \")\n\n")
-        f.write("if __name__ == \"__main__\":\n")
-        f.write("\tmain()\n")
         f.close()
         f = open(input_name, "w")
         f.close()
