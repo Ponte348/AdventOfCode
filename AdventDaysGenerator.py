@@ -7,12 +7,10 @@ def main():
     if len(sys.argv) < 2:
         print("Usage: python3 AdventDaysGenerator.py <year>")
         return
-
     year = sys.argv[1]
     if not year.isdigit():
         print("Usage: python3 AdventDaysGenerator.py <year>")
         return
-
     year = int(year)
     if year < 2015:
         print("Advent of Code only started in 2015!\nUsage: python3 AdventDaysGenerator.py <year>")
