@@ -6,4 +6,4 @@
   Got to day 8, will get further in the future.
 
 - **2023**
-  In progress.
+  Had to stop FeelsBadMan
