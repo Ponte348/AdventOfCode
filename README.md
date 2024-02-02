@@ -6,4 +6,4 @@
   Got to day 8, will get further in the future.
 
 - **2023**
-  Had to stop FeelsBadMan
+  Got to day 12, learnt some neat stuff, but I'm good for now.
