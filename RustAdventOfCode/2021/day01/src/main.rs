@@ -17,10 +17,9 @@ fn main(){
 
     // Part 1
     let mut increased = 0;
-    // Infinite number
+    // Maximum value of i32
     let mut first = i32::MAX;
 
-    // Loop through the numbers
     // For every number, check if the previous number is less than the current number
     for number in numbers.iter() {
         if *number > first {
@@ -29,6 +28,18 @@ fn main(){
         first = *number;
     }
 
+
+    // Part 2
+    let mut increased_sums = 0;
+    // For every vector[i]+vector[i-1]+vector[i-2] > vector[i-1]+vector[i-2]+vector[i-3]
+    // If it is, add 1 to the increased variable
+    for i in 3..numbers.len() {
+        if numbers[i] + numbers[i-1] + numbers[i-2] > numbers[i-1] + numbers[i-2] + numbers[i-3] {
+            increased_sums += 1;
+        }
+    }
+
     // Print the result
-    println!("Part 1: {}\nTime: {:?} microseconds", increased, start.elapsed().as_micros());
+    println!("Part 1: {}\nPart 2: {}\nTime taken: {:?} microseconds", increased, increased_sums, start.elapsed().as_micros());
+
 }
