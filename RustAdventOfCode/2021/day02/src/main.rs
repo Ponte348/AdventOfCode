@@ -1,4 +1,4 @@
-//use std::time::Instant;
+use std::time::Instant;
 use std::fs;
 
 fn part1(numbers: Vec<(String, i32)>) -> i32 {
@@ -29,35 +29,36 @@ fn part2(numbers: Vec<(String, i32)>) -> i32 {
             aim -= number.1;
         } else if number.0 == "forward" {
             horizontal += number.1;
+            depth += aim*number.1;
         }
     }
     return depth*horizontal;
 }
 
 fn main(){
-    //let start = Instant::now();
+    let start = Instant::now();
     
     // Read the values in input file line by line
     let contents = fs::read_to_string("src/input.txt")
         .expect("Something went wrong reading the file");
     // Split the contents by new line
     let lines: Vec<&str> = contents.split("\n").collect();
-    println!("{:?}", lines);
+    //println!("{:?}", lines);
     // Lines are "String Integer" pairs
     let mut numbers: Vec<(String, i32)> = Vec::new();
     for line in lines.iter() {
         let pair: Vec<&str> = line.split(" ").collect();
         numbers.push((pair[0].to_string(), pair[1].parse::<i32>().unwrap()));
     }
-    println!("{:?}", numbers);
+    //println!("{:?}", numbers);
 
     // Part 1
-    let result1 = part1(numbers);
+    let result1 = part1(numbers.clone());
 
     // Part 2
-
+    let result2 = part2(numbers.clone());
 
 
     // Print the result
-    //println!("Part 1: {}\nPart 2: {}\nTime taken: {:?} microseconds", result1, increased_sums, start.elapsed().as_micros());
+    println!("Part 1: {}\nPart 2: {}\nTime taken: {:?} microseconds", result1, result2, start.elapsed().as_micros());
 }
