@@ -4,7 +4,7 @@ Inside each year's folder there's gonna what structures or strategies I used for
 If I don't have anything it's because it was just a logical solution with a specific strategy.
 
 - **2021**
-  Started in 2023, will get back to it when I have time.
+  Started in 2023, reached day12.
 
 - **2022**
   Got to day 8, will get further in the future.
